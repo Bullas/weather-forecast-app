@@ -2,6 +2,8 @@
 
 Aplicativo iOS de previsão de tempo integrado com a API OpenWeather. Esse projeto faz parte do curso de introdução ao desenvolvimento iOS do canal Attekita Dev em parceria com a Backfront Academy.
 
+Versão do XCode utilizada: 14.3.1
+
 ## Conteúdo do curso
 
 - Introdução ao XCode
@@ -11,6 +13,12 @@ Aplicativo iOS de previsão de tempo integrado com a API OpenWeather. Esse proje
 - Autolayout
 - Integração com APIs
 - Processamento multi-thread
+
+## OpenWeather API
+
+Esse aplicativo integra com a API da OpenWeather. Para fazer a integração você precisará realizar seu cadastro no site da API e gerar a sua chave de acesso que será utilizada nas requisições, conforme demosntrado no projeto.
+
+[One Call API 3.0](https://openweathermap.org/api)
 
 ### Como acompanhar as aulas
 
