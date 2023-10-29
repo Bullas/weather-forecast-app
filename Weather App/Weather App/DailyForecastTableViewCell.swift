@@ -15,7 +15,7 @@ class DailyForecastTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "TER"
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         return label
     }()
@@ -24,7 +24,7 @@ class DailyForecastTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "min 25°C"
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         return label
     }()
@@ -33,7 +33,7 @@ class DailyForecastTableViewCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "max 25°C"
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         return label
     }()

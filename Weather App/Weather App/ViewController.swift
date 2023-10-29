@@ -150,7 +150,7 @@ class ViewController: UIViewController {
     private lazy var dailyForecastLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         label.text = "PROXIMOS DIAS"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.textAlignment = .center
@@ -164,7 +164,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(DailyForecastTableViewCell.self,
                            forCellReuseIdentifier: DailyForecastTableViewCell.identifier)
-        tableView.separatorColor = UIColor.constrastColor
+        tableView.separatorColor = UIColor.contrastColor
         return tableView
     }()
 
