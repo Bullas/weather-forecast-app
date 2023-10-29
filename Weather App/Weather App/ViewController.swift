@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     private lazy var headerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.constrastColor
+        view.backgroundColor = UIColor.contrastColor
         view.layer.cornerRadius = 20
         return view
     }()
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Umidade"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         return label
     }()
     
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         return label
     }()
     
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Vento"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         return label
     }()
     
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         return label
     }()
     
@@ -115,7 +115,7 @@ class ViewController: UIViewController {
     private lazy var hourlyForecastLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         label.text = "PREVISÃO POR HORA"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.textAlignment = .center
@@ -144,7 +144,7 @@ class ViewController: UIViewController {
     private lazy var dailyForecastLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor.constrastColor
+        label.textColor = UIColor.contrastColor
         label.text = "PROXIMOS DIAS"
         label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         label.textAlignment = .center
@@ -159,7 +159,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.register(DailyForecastTableViewCell.self,
                            forCellReuseIdentifier: DailyForecastTableViewCell.identifier)
-        tableView.separatorColor = UIColor.constrastColor
+        tableView.separatorColor = UIColor.contrastColor
         return tableView
     }()
     
