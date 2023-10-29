@@ -163,6 +163,19 @@ class ViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var loaderView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.white
+        return view
+    }()
+    
+    private lazy var loader: UIActivityIndicatorView = {
+        let loader = UIActivityIndicatorView(style: .large)
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        return loader
+    }()
+    
     private let service = Service()
     private var city = City(lat: "-23.6814346", lon: "-46.9249599", name: "São Paulo")
     private var forecastResponse: ForecastResponse?
@@ -174,6 +187,8 @@ class ViewController: UIViewController {
     }
     
     private func fetchData() {
+        showLoader()
+        
         service.fecthData(city: city) { [weak self] response in
             self?.forecastResponse = response
             DispatchQueue.main.async {
@@ -199,6 +214,8 @@ class ViewController: UIViewController {
         
         hourlyCollectionView.reloadData()
         dailyForecastTableView.reloadData()
+        
+        hideLoader()
     }
     
     private func setupView() {
@@ -215,11 +232,13 @@ class ViewController: UIViewController {
         view.addSubview(hourlyCollectionView)
         view.addSubview(dailyForecastLabel)
         view.addSubview(dailyForecastTableView)
+        view.addSubview(loaderView)
         
         headerView.addSubview(cityLabel)
         headerView.addSubview(temperatureLabel)
         headerView.addSubview(weatherIcon)
         
+        loaderView.addSubview(loader)
     }
     
     private func setConstraints() {
@@ -278,8 +297,26 @@ class ViewController: UIViewController {
             dailyForecastTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
             
         ])
+        
+        NSLayoutConstraint.activate([
+            loaderView.topAnchor.constraint(equalTo: view.topAnchor),
+            loaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            loaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            loaderView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            loader.centerXAnchor.constraint(equalTo: loaderView.centerXAnchor),
+            loader.centerYAnchor.constraint(equalTo: loaderView.centerYAnchor)
+        ])
     }
 
+    private func showLoader() {
+        loaderView.isHidden = false
+        loader.startAnimating()
+    }
+    
+    private func hideLoader() {
+        loaderView.isHidden = true
+        loader.stopAnimating()
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
